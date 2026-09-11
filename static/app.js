@@ -1,10 +1,37 @@
 let products = [];
 let cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
+const fallbackProducts = [
+  [1,"AKG N9 Hybrid ANC","Wireless",349,399,4.9,"8_Buy_the_AKG_N9_Hybrid_Premium_Wireless.png","Premium wireless over-ear with adaptive noise cancelling & 100h battery."],
+  [2,"Beats Studio Pro","Wireless",329,379,4.8,"2_Beats_Studio_Pro_Premium_Wireless.png","Iconic sound, custom acoustic platform, lossless audio via USB-C."],
+  [3,"Green Lion GP32X Gaming","Gaming",89,120,4.6,"3_Green_Lion_GP32X_Gaming_Headphone.png","RGB gaming headset with 7.1 surround sound and noise-cancel mic."],
+  [4,"Apple AirPods Pro 2","AirPods",249,299,4.9,"10_Apple_AirPods_Pro_2.png","Active noise cancelling earbuds with H2 chip & 30h total battery."],
+  [5,"Roland VMH-S100 Studio","Studio",249,299,4.7,"5_Roland_VMH_S100_Premium_Studio_Headphone.png","Professional studio monitoring headphones, flat reference sound."],
+  [6,"HECATE G2II 7.1","Gaming",79,99,4.4,"6_G2II_Black_HECATE_Gaming_Headset.png","360-degree surround sound gaming headset with detachable mic."],
+  [7,"Logitech G733 RGB","Gaming",159,199,4.8,"7_Logitech_G733_LIGHTSPEED_Wireless.png","LIGHTSPEED wireless with RGB lighting, only 278g ultra light."],
+  [8,"SoundArt M98 Studio","Studio",129,169,4.5,"9_SoundArt_Professional_Premium_Closed.png","Closed-back studio headphones trusted by producers worldwide."],
+  [9,"Sony WF-1000XM5","Earbuds",299,349,4.8,"13_Sony_WF_1000XM5_Earbuds.png","Industry leading ANC earbuds with Hi-Res audio & 36h battery."],
+  [10,"Beats Studio Buds+","Earbuds",169,199,4.6,"14_Beats_Studio_Buds_Plus.png","Punchy bass, active ANC & seamless one-touch pairing."],
+  [11,"Apple AirPods (2nd Gen)","AirPods",129,159,4.7,"21_AirPods_2nd_Gen.png","The iconic AirPods with H1 chip, Hey Siri & wireless charging case."],
+  [12,"JBL Tour Pro 2","Earbuds",149,179,4.4,"15_JBL_Tour_Pro_2.png","Smart charging case with touchscreen, ANC & 40h playtime."],
+  [13,"Sennheiser Momentum TWS","Earbuds",219,259,4.7,"19_Sennheiser_Momentum_TWS.png","True wireless with audiophile sound & adaptive noise cancelling."],
+  [14,"Bose QuietComfort Earbuds","Earbuds",239,279,4.8,"16_Bose_QuietComfort_Earbuds.png","World-class noise cancelling with deep, rich bass response."],
+  [15,"Nothing Ear (a)","Earbuds",129,159,4.5,"17_Nothing_Ear_a.png","Clean sound, modern design and low-latency wireless performance."],
+  [16,"Bose QC Earbuds II","Earbuds",199,249,4.6,"18_Bose_QC_Earbuds_Black.png","CustomTune sound calibration, compact fit & all-day comfort."],
+  [17,"Pro Wired Handsfree","Handsfree",25,35,4.3,"20_Wired_Handsfree.png","Braided-cable 3.5mm earphones with HD mic and deep bass."],
+  [18,"Type-C Handsfree HD","Handsfree",19,29,4.5,"22_Handsfree_TypeC.png","Premium metal-body Type-C earphones with noise-isolating mic."],
+  [19,"Classic White Handsfree","Handsfree",15,22,4.2,"23_Handsfree_Classic_White.png","Lightweight everyday earphones with crystal-clear calls & music."]
+].map(([id,name,category,price,old_price,rating,img,desc]) => ({id,name,category,price,old_price,rating,desc,img:`static/img/${img}`}));
+
 /* ---------- Products ---------- */
 async function loadProducts() {
-  const res = await fetch("/api/products");
-  products = (await res.json()).products;
+  try {
+    const res = await fetch("/api/products");
+    if (!res.ok) throw new Error("API unavailable");
+    products = (await res.json()).products;
+  } catch {
+    products = fallbackProducts;
+  }
   renderProducts("All");
 }
 
