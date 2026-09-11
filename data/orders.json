@@ -1,0 +1,21 @@
+[
+  {
+    "order_id": "ORD-BA242BFF",
+    "name": "Zohaib Malik",
+    "address": "Wapda Town, Lahore",
+    "phone": "03280731475",
+    "payment_method": "Cash on Delivery",
+    "payment_reference": "",
+    "items": [
+      {
+        "id": 2,
+        "name": "Beats Studio Pro",
+        "price": 329,
+        "img": "/static/img/2_Beats_Studio_Pro_Premium_Wireless.png",
+        "qty": 1
+      }
+    ],
+    "total": 329,
+    "time": "2026-09-10 11:38:18"
+  }
+]

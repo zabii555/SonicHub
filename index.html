@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SonicHub — Premium Headphones Store</title>
+<link rel="icon" type="image/png" href="/static/img/4_Headphone_product_on_white_background.png">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="logo">🎧 Sonic<span>Hub</span></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#deal">Deal</a>
+    <a href="#products">Products</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="cart-btn" onclick="toggleCart(true)">🛒 Cart <span id="cart-count">0</span></button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text reveal hero-intro">
+    <p class="eyebrow"><span></span> SonicHub audio department / 2026</p>
+    <h1>Sound that<br><span class="grad">moves you.</span></h1>
+    <p class="sub">Premium wireless, gaming &amp; studio headphones — handpicked sound for every listener.</p>
+    <div class="hero-btns">
+      <a href="#products" class="cta">Explore collection <span>↗</span></a>
+      <a href="#deal" class="text-link">See today's deal <span>↗</span></a>
+    </div>
+    <div class="hero-stats-mini">
+      <div><b>50K+</b><span>Listeners served</span></div>
+      <div><b>4.9★</b><span>Average rating</span></div>
+      <div><b>120+</b><span>Sound makers</span></div>
+    </div>
+  </div>
+  <div class="hero-img reveal">
+    <div class="hero-orbit orbit-one"></div>
+    <div class="hero-orbit orbit-two"></div>
+    <div class="hero-product-card"><span>Featured drop</span><b>Beats Studio Pro</b><small>Adaptive ANC / 40h battery</small></div>
+    <img src="/static/img/parts/hero-full.png" alt="Black Beats Studio Pro headphones" class="hero-product">
+    <div class="hero-note"><span>01</span><b>Deep bass.<br>Zero noise.</b></div>
+  </div>
+</section>
+
+<!-- BRAND MARQUEE -->
+<div class="marquee"><div class="marquee-track">
+  <span>SONY</span>✦<span>BEATS</span>✦<span>AKG</span>✦<span>LOGITECH G</span>✦<span>ROLAND</span>✦<span>HECATE</span>✦<span>SOUNDART</span>✦
+  <span>SONY</span>✦<span>BEATS</span>✦<span>AKG</span>✦<span>LOGITECH G</span>✦<span>ROLAND</span>✦<span>HECATE</span>✦<span>SOUNDART</span>✦
+</div></div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <h2 class="reveal">Shop by <span class="grad">Category</span></h2>
+  <p class="section-sub reveal">Find the perfect sound for your lifestyle</p>
+  <div class="cat-grid">
+    <div class="cat-card reveal" style="--glow:#8b5cf6" onclick="goCategory('Wireless')">
+      <span class="cat-count">2 products</span>
+      <div class="cat-img"><img src="/static/img/2_Beats_Studio_Pro_Premium_Wireless.png" alt="Wireless"></div>
+      <h3>Wireless</h3><p>Noise cancelling, long battery, total freedom</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+    <div class="cat-card reveal" style="--glow:#ec4899" onclick="goCategory('Gaming')">
+      <span class="cat-count">3 products</span>
+      <div class="cat-img"><img src="/static/img/7_Logitech_G733_LIGHTSPEED_Wireless.png" alt="Gaming"></div>
+      <h3>Gaming</h3><p>Surround sound, RGB, crystal-clear mics</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+    <div class="cat-card reveal" style="--glow:#38bdf8" onclick="goCategory('Studio')">
+      <span class="cat-count">2 products</span>
+      <div class="cat-img"><img src="/static/img/5_Roland_VMH_S100_Premium_Studio_Headphone.png" alt="Studio"></div>
+      <h3>Studio</h3><p>Flat reference sound for creators &amp; pros</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+    <div class="cat-card reveal" style="--glow:#22c55e" onclick="goCategory('Earbuds')">
+      <span class="cat-count">6 products</span>
+      <div class="cat-img"><img src="/static/img/10_Apple_AirPods_Pro_2.png" alt="Earbuds"></div>
+      <h3>Earbuds</h3><p>Portable, crisp, and designed for everyday listening</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+    <div class="cat-card reveal" style="--glow:#f59e0b" onclick="goCategory('AirPods')">
+      <span class="cat-count">2 products</span>
+      <div class="cat-img"><img src="/static/img/21_AirPods_2nd_Gen.png" alt="AirPods"></div>
+      <h3>AirPods</h3><p>Apple's iconic earbuds — instant pairing, pure magic</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+    <div class="cat-card reveal" style="--glow:#06b6d4" onclick="goCategory('Handsfree')">
+      <span class="cat-count">3 products</span>
+      <div class="cat-img"><img src="/static/img/20_Wired_Handsfree.png" alt="Handsfree"></div>
+      <h3>Handsfree</h3><p>Reliable wired earphones with mic — plug &amp; play</p>
+      <span class="cat-link">Explore →</span>
+    </div>
+  </div>
+</section>
+
+<!-- DEAL OF THE DAY -->
+<section class="section deal" id="deal">
+  <div class="deal-img reveal"><img src="/static/img/2_Beats_Studio_Pro_Premium_Wireless.png" alt="Deal"></div>
+  <div class="deal-text reveal">
+    <p class="tag">⏰ Deal of the Day</p>
+    <h2>Beats Studio Pro<br><span class="grad">$329 only</span> <span class="old">$379</span></h2>
+    <p class="section-sub">Custom acoustic platform, lossless USB-C audio, 40h battery. Stock is flying!</p>
+    <div class="countdown" id="countdown">
+      <div><b id="cd-h">00</b><span>Hours</span></div>
+      <div><b id="cd-m">00</b><span>Mins</span></div>
+      <div><b id="cd-s">00</b><span>Secs</span></div>
+    </div>
+    <div class="stock-bar"><div class="stock-fill" id="stock-fill"></div></div>
+    <p class="stock-txt">🔥 78% claimed — only 9 left!</p>
+    <button class="cta" onclick="addToCart(2);toggleCart(true)">Grab the Deal 🚀</button>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <h2 class="reveal">Our <span class="grad">Collection</span></h2>
+  <p class="section-sub reveal">Handpicked headphones, tested by audio experts</p>
+  <div class="filters reveal">
+    <button class="filter active" data-cat="All">All</button>
+    <button class="filter" data-cat="Wireless">Wireless</button>
+    <button class="filter" data-cat="Gaming">Gaming</button>
+    <button class="filter" data-cat="Studio">Studio</button>
+    <button class="filter" data-cat="Earbuds">Earbuds</button>
+      <button class="filter" data-cat="AirPods">AirPods</button>
+      <button class="filter" data-cat="Handsfree">Handsfree</button>
+  </div>
+  <div class="grid" id="product-grid"></div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat reveal"><b class="counter" data-target="50000">0</b><span>Happy Customers</span></div>
+  <div class="stat reveal"><b class="counter" data-target="120">0</b><span>Products</span></div>
+  <div class="stat reveal"><b class="counter" data-target="35">0</b><span>Countries Served</span></div>
+  <div class="stat reveal"><b class="counter" data-target="99">0</b><span>% Positive Reviews</span></div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="reviews">
+  <h2 class="reveal">What Our <span class="grad">Customers Say</span></h2>
+  <p class="section-sub reveal">Over 12,000 five-star reviews and counting</p>
+  <div class="review-grid">
+    <div class="review reveal"><div class="review-head"><img class="review-image" src="https://i.pravatar.cc/128?img=12" alt="Hamza R." loading="lazy"><span class="google-badge"><b>G</b> Google review</span></div><div class="stars">★★★★★</div>
+      <p>"The AKG N9 changed my daily commute. The noise cancelling is unreal — best purchase this year!"</p>
+      <b>Hamza R.</b><span>Lahore, PK</span></div>
+    <div class="review reveal"><div class="review-head"><img class="review-image" src="https://i.pravatar.cc/128?img=47" alt="Ayesha K." loading="lazy"><span class="google-badge"><b>G</b> Google review</span></div><div class="stars">★★★★★</div>
+      <p>"Bought the G733 for gaming. Super light, mic is crystal clear, my squad hears everything perfectly."</p>
+      <b>Ayesha K.</b><span>Karachi, PK</span></div>
+    <div class="review reveal"><div class="review-head"><img class="review-image" src="https://i.pravatar.cc/128?img=33" alt="Bilal M." loading="lazy"><span class="google-badge"><b>G</b> Google review</span></div><div class="stars">★★★★★</div>
+      <p>"I produce music and the Roland VMH-S100 is my new reference. Flat, honest sound. Highly recommended."</p>
+      <b>Bilal M.</b><span>Islamabad, PK</span></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <h2 class="reveal">Frequently Asked <span class="grad">Questions</span></h2>
+  <div class="faq-list reveal">
+    <div class="faq-item"><button class="faq-q">How long does delivery take?<span>+</span></button>
+      <div class="faq-a"><p>Orders are delivered within 3–5 working days nationwide. Express 24h delivery is available in major cities.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What payment methods do you accept?<span>+</span></button>
+      <div class="faq-a"><p>We accept Cash on Delivery, credit/debit cards, JazzCash, EasyPaisa and bank transfer.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Can I return a product?<span>+</span></button>
+      <div class="faq-a"><p>Yes! You have 30 days to return any product in original condition for a full refund — no questions asked.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Do headphones come with warranty?<span>+</span></button>
+      <div class="faq-a"><p>Every product includes an official 2-year warranty covering manufacturing defects.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Are these original brand products?<span>+</span></button>
+      <div class="faq-a"><p>Absolutely. We source directly from official distributors with verified authenticity.</p></div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter reveal">
+  <h2>Get <span class="grad">10% Off</span> Your First Order 🎁</h2>
+  <p>Join 20,000+ subscribers — get exclusive deals &amp; new arrival alerts.</p>
+  <form id="newsletter-form">
+    <input type="email" id="nl-email" placeholder="Enter your email" required>
+    <button class="cta" type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section section reveal" id="message">
+  <h2>Send us a <span class="grad">Message</span></h2>
+  <p class="section-sub">Questions, orders, or support? We will get back to you soon.</p>
+  <form id="contact-form" class="contact-form">
+    <input type="text" id="contact-name" placeholder="Your name" required>
+    <input type="email" id="contact-email" placeholder="Your email">
+    <textarea id="contact-message" placeholder="Write your message" rows="5" required></textarea>
+    <button class="cta" type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feat reveal"><div class="feat-icon">🚚</div><h3>Free Shipping</h3><p>On all orders over $50</p></div>
+  <div class="feat reveal"><div class="feat-icon">↩️</div><h3>30-Day Returns</h3><p>No questions asked</p></div>
+  <div class="feat reveal"><div class="feat-icon">🛡️</div><h3>2-Year Warranty</h3><p>On every product</p></div>
+  <div class="feat reveal"><div class="feat-icon">🎧</div><h3>Expert Support</h3><p>7 days a week</p></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="logo">🎧 Sonic<span>Hub</span></div>
+      <p class="footer-about">Pakistan's most trusted destination for premium headphones since 2020. Sound quality guaranteed.</p>
+      <div class="socials"><a href="#">📘</a><a href="#">📸</a><a href="#">🐦</a><a href="#">▶️</a></div>
+    </div>
+    <div><h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#products">Products</a><a href="#deal">Deals</a><a href="#faq">FAQ</a></div>
+    <div><h4>Categories</h4>
+      <a href="#products">Wireless</a><a href="#products">Gaming</a><a href="#products">Studio</a><a href="#products">All Products</a></div>
+    <div><h4>Contact</h4>
+      <p>📞 <a href="tel:03280731475">03280731475</a><br>✉️ <a href="mailto:zm6133971@gmail.com">zm6133971@gmail.com</a><br>📍 Lahore, Pakistan</p></div>
+  </div>
+  <div class="payments"><span>💳 Visa</span><span>💳 Mastercard</span><span>📱 JazzCash</span><span>📱 EasyPaisa</span><span>💵 COD</span></div>
+  <p class="copyright">© 2026 SonicHub. All rights reserved. | Made with ❤️ in Pakistan</p>
+</footer>
+
+<button id="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
+<aside class="cart-drawer" id="cart-drawer">
+  <div class="cart-head"><h3>Your Cart 🛒</h3><button onclick="toggleCart(false)">✕</button></div>
+  <div id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="total">Total: <b id="cart-total">$0</b></div>
+    <div id="checkout-form">
+      <input type="text" id="co-name" placeholder="Full name">
+      <input type="text" id="co-phone" placeholder="Phone">
+      <input type="text" id="co-address" placeholder="Delivery address">
+      <label class="payment-label" for="co-payment">Payment method</label>
+      <select id="co-payment">
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="JazzCash">JazzCash - 03280731475</option>
+        <option value="Easypaisa">Easypaisa - 03280731475</option>
+      </select>
+      <input type="text" id="co-reference" placeholder="Transaction ID (optional)">
+      <button class="cta full" onclick="placeOrder()">Place Order 🚀</button>
+    </div>
+  </div>
+</aside>
+
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
